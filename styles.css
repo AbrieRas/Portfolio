@@ -1,0 +1,298 @@
+/* Global styles */
+div.theme-button {
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 5%;
+    width: 16%;
+    padding: 25px;
+    word-wrap: break-word;
+    background-color: #aff8a2;
+    transition: background-color 0.5s;
+    font-weight: bold;
+    color: #000000;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+div.theme-button:hover,
+div.theme-button:focus,
+#submit.active:hover,
+#submit.active:focus {
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+hr {
+    margin-top: 7%;
+    margin-bottom: 3%;
+    width: 90%;
+}
+
+hr.vertical-hr {
+    width: 1px;
+    height: 100%;
+    border: none;
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+#back-to-top {
+    width: 0px;
+    height: 0px;
+    background-color: #aff8a2;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 30px;
+    border: 1px solid black;
+    transition: all 1s ease;
+}
+
+img.icon {
+    width: 10px;
+}
+
+/* Header styles */
+#header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#header > div.column-left img.icon {
+    width: 15px;
+}
+
+#header > div.column-left {
+    flex: 1;
+    font-size: 24px;
+}
+
+#header > div.column-right {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#header > div.column-right > div {
+    margin: 10px;
+    color: #000000;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 1.0s ease, box-shadow 0.5s ease;
+    transition: rgba(0, 0, 0, 0.1) 0 4px 12px 0.5s ease;
+}
+
+#header > div.column-right > div:hover {
+    color: #317a24b7;
+    border-bottom: 2px solid #000000;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+/* Intro styles */
+#intro {
+    text-align: center;
+}
+
+#intro > #title {
+    margin-top: 3%;
+}
+
+#intro > #about-title {
+    margin-top: 2%;
+}
+
+#intro > div > p {
+    margin-left: 22.5%;
+    width: 55%;
+}
+
+#intro > #navigation {
+    margin-left: 16%;
+    width: 68%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#content img {
+    width: 400px;
+    border-radius: 50%;
+}
+
+/* Career, Achievements, Repositories and Get in touch styles */
+#career > h1,
+#achievements > h1,
+#repositories > h1,
+#get-in-touch > h1 {
+    margin-left: 5%;
+}
+
+/* Career and achievements styles */
+.career-entry,
+.achievement-entry {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 auto;
+}
+
+.career-entry > div.column-left,
+.achievement-entry > div.column-left {
+    text-align: right;
+    margin-right: 2%;
+    opacity: 30%;
+}
+
+/* Career styles */
+.career-entry > div.column-right {
+    width: 45%;
+    max-width: 45%;
+    margin-right: 5%;
+}
+
+.career-entry > div > p {
+    margin-top: 2%;
+}
+
+/* Achievements styles */
+.achievement-entry > div.column-right {
+    width: 45%;
+    max-width: 45%;
+    margin-right: 5%;
+}
+
+/* Repositories styles */
+.repository-entry {
+    margin: 2.5% 15% 4% 15%;
+    padding: 1%;
+    border: 3px solid black;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.repository-entry:last-child {
+    margin-bottom: 0%;
+}
+
+.repository-entry .column-left {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.repository-entry-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.repository-entry-header > div.column-left,
+.repository-entry-header > div.column-right {
+    display: inline-flex;
+}
+
+.repository-entry-header > div.column-right {
+    width: 20%;
+}
+
+.repository-entry-header > div.column-right > ul {
+    margin-top: 0%;
+}
+
+/* Get in touch styles */
+#get-in-touch-body {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#get-in-touch img.icon {
+    width: 10px;
+    border-radius: 0%;
+}
+
+#get-in-touch-body div#email-box div:first-child,
+#get-in-touch-body div#mobile-box div:first-child {
+    margin: 12% auto 3%;
+}
+
+#get-in-touch-body > form.column-right {
+    text-align: center;
+    width: 40%;
+}
+
+#get-in-touch-body div.inner-column-left,
+#get-in-touch-body div.inner-column-right {
+    display: inline-block;
+    width: 49%;
+}
+
+#get-in-touch-body label {
+    display: flex;
+    margin-left: 2%;
+}
+
+#get-in-touch-body input {
+    width: 90%;
+    padding: 3%;
+    margin-bottom: 8%;
+}
+
+textarea#message {
+    width: 94%;
+    padding: 1%;
+    font-size: 16px;
+    margin-bottom: 5%;
+}
+
+#email.touched {
+    border-color: #bdbcbc;
+}
+
+#email.invalid {
+    background-color: #ffeded;
+    border-color: #da5252;
+}
+
+#submit {
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 0% auto;
+    width: 80%;
+    padding: 25px;
+    word-wrap: break-word;
+    font-weight: bold;
+    color: #000000;
+    cursor: default;
+    background-color: gray;
+    color: #ffffff;
+    transition: background-color 0.5s;
+}
+
+#submit.active {
+    background-color: #aff8a2;
+    color: #000000;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+/* Footer styles */
+#footer > div.column {
+    width: 25%;
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#footer > div.column > div {
+    background-color: #f2f2f2;
+    word-wrap: break-word;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+    border-radius: 10px;
+}
