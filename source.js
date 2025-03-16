@@ -100,7 +100,7 @@ const addSubmitButtonFunctionality = () => {
                 message: sanatizedMessage,
             };
 
-            fetch('/email-message', {
+            fetch('https://portfolio-server-p1ot.onrender.com/email-message', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
