@@ -10,6 +10,15 @@ const app = new Vue({
 		careers: [],
 		achievements: [],
 		repositories: [],
+        serverDomain: 'https://portfolio-server-p1ot.onrender.com',
+        fetchOptions: {
+            method: 'GET',
+            headers: {
+                'Request-Origin-Header': 'Same-Origin',
+                'Content-Type': 'application/json',
+            },
+            mode: 'cors',
+        }
 	},
 	computed: {
 		emailIsValid: function () {
@@ -32,14 +41,7 @@ const app = new Vue({
 	},
 	methods: {
 		fetchCareers() {
-			fetch('https://portfolio-server-p1ot.onrender.com/retrieve/Careers', {
-				method: 'GET',
-				headers: {
-					'Request-Origin-Header': 'Same-Origin',
-					'Content-Type': 'application/json',
-				},
-				mode: 'cors',
-			})
+			fetch(`${serverDomain}/retrieve/Careers`, this.fetchOptions)
 				.then((response) => response.json())
 				.then((data) => {
 					this.careers = data;
@@ -49,14 +51,7 @@ const app = new Vue({
 				});
 		},
 		fetchAchievements() {
-			fetch('https://portfolio-server-p1ot.onrender.com/retrieve/Achievements', {
-				method: 'GET',
-				headers: {
-					'Request-Origin-Header': 'Same-Origin',
-					'Content-Type': 'application/json',
-				},
-				mode: 'cors',
-			})
+			fetch(`${serverDomain}/retrieve/Achievements`, this.fetchOptions)
 				.then((response) => response.json())
 				.then((data) => {
 					this.achievements = data;
@@ -66,14 +61,7 @@ const app = new Vue({
 				});
 		},
 		fetchRepositories() {
-			fetch('https://portfolio-server-p1ot.onrender.com/retrieve/Repositories', {
-				method: 'GET',
-				headers: {
-					'Request-Origin-Header': 'Same-Origin',
-					'Content-Type': 'application/json',
-				},
-				mode: 'cors',
-			})
+			fetch(`${serverDomain}/retrieve/Repositories`, this.fetchOptions)
 				.then((response) => response.json())
 				.then((data) => {
 					// Convert the comma-separated language key string into an array
