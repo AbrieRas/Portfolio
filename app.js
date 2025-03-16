@@ -41,7 +41,7 @@ const app = new Vue({
 	},
 	methods: {
 		fetchCareers() {
-			fetch(`${serverDomain}/retrieve/Careers`, this.fetchOptions)
+			fetch(`${this.serverDomain}/retrieve/Careers`, this.fetchOptions)
 				.then((response) => response.json())
 				.then((data) => {
 					this.careers = data;
@@ -51,7 +51,7 @@ const app = new Vue({
 				});
 		},
 		fetchAchievements() {
-			fetch(`${serverDomain}/retrieve/Achievements`, this.fetchOptions)
+			fetch(`${this.serverDomain}/retrieve/Achievements`, this.fetchOptions)
 				.then((response) => response.json())
 				.then((data) => {
 					this.achievements = data;
@@ -61,7 +61,7 @@ const app = new Vue({
 				});
 		},
 		fetchRepositories() {
-			fetch(`${serverDomain}/retrieve/Repositories`, this.fetchOptions)
+			fetch(`${this.serverDomain}/retrieve/Repositories`, this.fetchOptions)
 				.then((response) => response.json())
 				.then((data) => {
 					// Convert the comma-separated language key string into an array
