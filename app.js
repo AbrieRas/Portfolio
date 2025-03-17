@@ -18,7 +18,11 @@ const app = new Vue({
                 'Content-Type': 'application/json',
             },
             mode: 'cors',
-        }
+        },
+		loadingText: "Loading.",
+		loadingDotAmount: 1,
+		loading: true,
+		loadingInterval: null,
 	},
 	computed: {
 		emailIsValid: function () {
@@ -35,11 +39,18 @@ const app = new Vue({
 		},
 	},
 	created() {
+		this.startLoadingAnimation();
 		this.fetchCareers();
 		this.fetchAchievements();
 		this.fetchRepositories();
 	},
 	methods: {
+		startLoadingAnimation() {
+			this.loadingInterval = setInterval(() => {
+				this.loadingDotAmount = (this.loadingDotAmount % 3) + 1;
+				this.loadingText = "Loading" + ".".repeat(this.loadingDotAmount);
+			}, 500);
+		},
 		fetchCareers() {
 			fetch(`${this.serverDomain}/retrieve/Careers`, this.fetchOptions)
 				.then((response) => response.json())
@@ -71,6 +82,10 @@ const app = new Vue({
 						}
 					});
 					this.repositories = data;
+
+					// Disable loading animation
+					this.loading = false;
+					clearInterval(this.interval);
 				})
 				.catch((error) => {
 					console.error('Error:', error);

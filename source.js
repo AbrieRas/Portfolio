@@ -31,7 +31,7 @@ const appendImageToGetInTouch = (message) => {
 
     // Thanks image
     const thanksImage = document.createElement('img');
-    thanksImage.src = 'https://cdn.glitch.global/499fb8d5-afc7-4414-a2d2-c90b9cb101fe/Self-Thanking.png?v=1697039376324';
+    thanksImage.src = './Assets/Self-Thanking.png';
     thanksImage.alt = 'Thank you image';
 
     // Append the thanks text and image elements to the tempDiv

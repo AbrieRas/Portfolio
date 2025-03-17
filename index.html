@@ -22,7 +22,7 @@
 
             <div id="header">
                 <div class="column-left">
-                    <div><img class="icon" src="https://cdn.glitch.global/499fb8d5-afc7-4414-a2d2-c90b9cb101fe/user-regular.svg?v=1696875570458"/> <strong>Abrie Ras</strong></div>
+                    <div><img class="icon" src="./Assets/user-regular.svg"/> <strong>Abrie Ras</strong></div>
                 </div>
 
                 <div class="column-right">
@@ -39,7 +39,7 @@
             <div id="content">
                 <div id="intro">
                     <div id="title"><h1>Full Stack Developer | Cybersecurity Analyst</h1></div>
-                    <div><img src="https://cdn.glitch.global/499fb8d5-afc7-4414-a2d2-c90b9cb101fe/Self.bmp?v=1696875569859"/></div>
+                    <div><img src="./Assets/self.jpg"/></div>
                     <div id="about-title"><h3>About me</h3></div>
                     <div><p>I am a dedicated software engineer, specializing in full-stack web development. 
                         With a track record of delivering high-quality service and a passion for technology, 
@@ -58,12 +58,15 @@
                 <div id="career">
                     <h1>Career</h1>
 
-                    <career
-                        v-for="career in careers" :key="career.id"
-                        v-bind:dates="career.dates"
-                        v-bind:company="career.company"
-                        v-bind:role="career.role"
-                        v-bind:description="career.description"></career>
+                    <h1 v-if="loading">{{ loadingText }}</h1>
+                    <span v-else>
+                        <career
+                            v-for="career in careers" :key="career.id"
+                            v-bind:dates="career.dates"
+                            v-bind:company="career.company"
+                            v-bind:role="career.role"
+                            v-bind:description="career.description"></career>
+                    </span>
                 </div>
 
                 <hr/>
@@ -71,10 +74,13 @@
                 <div id="achievements">
                     <h1>Achievements</h1>
 
-                    <achievement
-                        v-for="achievement in achievements" :key="achievement.id"
-                        v-bind:date="achievement.date"
-                        v-bind:type="achievement.type"></achievement>
+                    <h1 v-if="loading">{{ loadingText }}</h1>
+                    <span v-else>
+                        <achievement
+                            v-for="achievement in achievements" :key="achievement.id"
+                            v-bind:date="achievement.date"
+                            v-bind:type="achievement.type"></achievement>
+                    </span>
                 </div>
 
                 <hr/>
@@ -82,11 +88,14 @@
                 <div id="repositories">
                     <h1>Repositories</h1>
 
-                    <repository
-                        v-for="repository in repositories" :key="repository.id"
-                        v-bind:name="repository.name"
-                        v-bind:languages="repository.languages"
-                        v-bind:description="repository.description"></repository>
+                    <h1 v-if="loading">{{ loadingText }}</h1>
+                    <span v-else>
+                        <repository
+                            v-for="repository in repositories" :key="repository.id"
+                            v-bind:name="repository.name"
+                            v-bind:languages="repository.languages"
+                            v-bind:description="repository.description"></repository>
+                    </span>
                 </div>
 
                 <hr/>
@@ -96,11 +105,11 @@
                     <div id="get-in-touch-body">
                         <div class="column-left">
                             <div id="email-box">
-                                <div><img class="icon" src="https://cdn.glitch.global/499fb8d5-afc7-4414-a2d2-c90b9cb101fe/envelope-regular.svg?v=1696875565260"/> <strong>Email</strong></div>
+                                <div><img class="icon" src="./Assets/envelope-regular.svg"/> <strong>Email</strong></div>
                                 <div><a href="mailto:abraham.ras97@gmail.com?subject=Feedback on Abrie CV">abraham.ras97@gmail.com</a></div>
                             </div>
                             <div id="mobile-box">
-                                <div><img class="icon" src="https://cdn.glitch.global/499fb8d5-afc7-4414-a2d2-c90b9cb101fe/mobile-screen-button-solid.svg?v=1696875567095"/> <strong>Mobile</strong></div>
+                                <div><img class="icon" src="./Assets/mobile-screen-button-solid.svg"/> <strong>Mobile</strong></div>
                                 <div><a href="tel:27799489329" target="_blank">+27 79 948 9329</a></div>
                             </div>
                         </div>
@@ -134,23 +143,23 @@
 
             <div id="footer">
                 <div class="column">
-                    <div><img class="icon" src="https://cdn.glitch.global/499fb8d5-afc7-4414-a2d2-c90b9cb101fe/envelope-regular.svg?v=1696875565260"/> <strong>Email</strong></div>
+                    <div><img class="icon" src="./Assets/envelope-regular.svg"/> <strong>Email</strong></div>
                     <div><a href="mailto:abraham.ras97@gmail.com?subject=Feedback on Abrie CV">abraham.ras97@gmail.com</a></div>
                 </div>
 
                 <div class="column">
-                    <div><img class="icon" src="https://cdn.glitch.global/499fb8d5-afc7-4414-a2d2-c90b9cb101fe/mobile-screen-button-solid.svg?v=1696875567095"/> <strong>Mobile</strong></div>
+                    <div><img class="icon" src="./Assets/mobile-screen-button-solid.svg"/> <strong>Mobile</strong></div>
                     <div><a href="tel:27799489329" target="_blank">+27 79 948 9329</a></div>
                 </div>
 
                 <div class="column">
                     <div><strong>Social Media</strong></div>
-                    <div><img class="icon" src="https://cdn.glitch.global/499fb8d5-afc7-4414-a2d2-c90b9cb101fe/linkedin-in.svg?v=1696875566508"/> <a href="https://www.linkedin.com/in/Abrie/" target="_blank">LinkedIn</a></div>
+                    <div><img class="icon" src="./Assets/linkedin-in.svg"/> <a href="https://www.linkedin.com/in/Abrie/" target="_blank">LinkedIn</a></div>
                 </div>
 
                 <div class="column">
                     <div><strong>Coding Profiles</strong></div>
-                    <div><img class="icon" src="https://cdn.glitch.global/499fb8d5-afc7-4414-a2d2-c90b9cb101fe/github.svg?v=1696875565950"/> <a href="https://github.com/AbrieRas" target="_blank">GitHub</a></div>
+                    <div><img class="icon" src="./Assets/github.svg"/> <a href="https://github.com/AbrieRas" target="_blank">GitHub</a></div>
                     <div><a href="https://www.codecademy.com/profiles/AbrieRas" target="_blank">CodeCademy</a></div>
                 </div>
             </div>
