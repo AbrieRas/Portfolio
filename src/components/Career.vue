@@ -12,7 +12,10 @@
 
     const randomId = uuidv4();
     const formattedStartDate = formatDate(props.DATES.start);
-    const formattedEndDate = formatDate(props.DATES.end);
+    let formattedEndDate;
+    props.DATES.end === 'Current'
+        ? formattedEndDate = props.DATES.end
+        : formattedEndDate = formatDate(props.DATES.end);
 </script>
 
 <template>
