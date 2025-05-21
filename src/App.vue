@@ -62,7 +62,7 @@ const fetchRepositories = () => {
 		.then((data) => {
 			data.forEach((repository) => {
 				if (repository.languages) {
-					repository.languages = repository.languages.split(',').map((lang) => lang.trim());
+					repository.languages = repository.languages.split(',').map((lang) => lang);
 				}
 			});
 			repositories.value = data;
