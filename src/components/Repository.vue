@@ -7,7 +7,7 @@
         CREATED_DATE: String,
         TITLE: String,
         DESCRIPTION: String,
-        LANGUAGES: Array,
+        LANGUAGES: String,
     });
 
     const randomId = uuidv4();
