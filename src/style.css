@@ -1,4 +1,14 @@
 /* Global styles */
+* {
+	font-family: system-ui;
+}
+
+/* Temp override for current patch - do not use/delete next patch
+body {
+	background-color: #181a1b;
+	color: #e8e6e3 !important; 
+} */
+
 div.theme-button {
 	text-align: center;
 	border: 2px solid black;
