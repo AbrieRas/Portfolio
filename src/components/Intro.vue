@@ -4,7 +4,7 @@
 
 <template>
     <div id="intro">
-        <div id="title"><h1>Full Stack Developer | Cybersecurity Analyst</h1></div>
+        <div id="title"><h1>Full Stack Developer | Certified Ethical Hacker</h1></div>
         <div><img src="../assets/self.jpg"/></div>
         <div id="about-title"><h3>About me</h3></div>
         <div><p>Good day, I'm Abrie! I am a dedicated software engineer, specializing in full-stack web development. 
