@@ -1,4 +1,4 @@
-# Abrie's Portfolio Project <sup>(Jan 2026)</sup>
+# Abrie's Portfolio Project  <sup>(Jan 2026)</sup>
 
 <div align="center">
   <img src="./images/abrie-portfolio-project-logo.png" alt="Abrie's Portfolio Project Logo" width="150">
